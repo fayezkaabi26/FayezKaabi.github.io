@@ -10,6 +10,11 @@
 	color: grey;
 }
 
+li:last-child
+{
+    float:right;
+}
+
 site-search {
 	color: white;
 }
