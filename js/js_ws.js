@@ -1,13 +1,13 @@
 $(document).ready(function() {
 	$.ajax({
-		url : "https://api.blockcypher.com/v1/btc/main",
+		url : "https://blockchain.info/latestblock",
 		dataType : "json",
 		contentType : "application/json;",
 		type : "GET",
 		async : false,
 
 		success : function(data) {
-			$('#bitcoin_latest_block').append("data :" + data.height);			
+			$('#bitcoin_latest_block').append("data :" + data.hash);			
 		},
 
 		error : function(xhr, status, err) {
