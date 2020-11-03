@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	$.ajax({
-		url : "https://blockchain.info/latestblock",
+		url : "https://api.blockcypher.com/v1/btc/main",
 		dataType : "json",
 		contentType : "application/json;",
 		type : "GET",
