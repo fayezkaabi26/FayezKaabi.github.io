@@ -7,7 +7,7 @@ $(document).ready(function() {
 		async : false,
 
 		success : function(data) {
-			$('#bitcoin_latest_block').append("data :" + data.hash);			
+			$('#bitcoin_latest_block').append("data hash :" + data.hash + "data height :" + data.height);			
 		},
 
 		error : function(xhr, status, err) {
