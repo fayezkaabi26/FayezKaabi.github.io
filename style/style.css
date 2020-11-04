@@ -51,3 +51,9 @@ body{
 }
 
 /*Resize the wrap to see the search bar change!*/
+
+.wrap {
+	position: absolute;
+	left:-500px;
+	top:30px;
+}
