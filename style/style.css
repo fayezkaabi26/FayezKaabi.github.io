@@ -10,7 +10,7 @@
 	color: grey;
 }
 
-li:last-child
+#nav-bar > li:last-child
 {
     float:right;
 }
