@@ -52,7 +52,7 @@ body{
 
 /*Resize the wrap to see the search bar change!*/
 
-.wrap {
+.search_bar {
 	position: absolute;
 	left:-500px;
 	top:30px;
