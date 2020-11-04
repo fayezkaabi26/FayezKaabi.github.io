@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
 .first_title {
 	color: red;
 }
@@ -10,7 +12,7 @@
 	color: grey;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
 
 body{
   background: #f2f2f2;
