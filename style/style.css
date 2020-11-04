@@ -51,11 +51,3 @@ body{
 }
 
 /*Resize the wrap to see the search bar change!*/
-.wrap{
-  width: 60%;
-  position: absolute;
-  margin-left: 1000px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
