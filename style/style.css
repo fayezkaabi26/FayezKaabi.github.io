@@ -20,7 +20,8 @@ body{
 }
 .search_bar {
 	width: 300px;
-	margin-left: 400px;
+	float: right;
+	height: 25px;
 }
 
 .search {
