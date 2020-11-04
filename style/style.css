@@ -54,6 +54,6 @@ body{
 
 /*Resize the wrap to see the search bar change!*/
 
-.search_bar {
-	width: 200px;
+li.search_bar {
+	width: 400px;
 }
