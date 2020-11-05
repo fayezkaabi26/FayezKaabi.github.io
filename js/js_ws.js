@@ -17,25 +17,26 @@ $(document).ready(function() {
 	});
 });
 
- function myFunctionBlock() {
-
-        var request;
-        var input1 = document.getElementById('searchBar');
-        var api = 'https://api.blockcypher.com/v1/btc/main/blocks/';
-        var sum = api + input1.value;
-
-        request = new XMLHttpRequest();
-
-        request.open('GET', sum, true);
-        request.onload = function () {
-
-            var data = JSON.parse(this.response);
-            if (request.status >= 200 && request.status < 400) {
-                console.log(data);
-            } else {
-                console.log(input1.value);
-            }
-        }
-        request.send();
+function getAPIData(inputText) {
+  $.ajax({
+    'url': 'https://api.blockcypher.com/v1/btc/main/blocks',
+    'type': 'GET',
+    'dataType': 'json',
+    'data': {'number': inputText},
+    'success': function(response) {
+      console.log(response);
+    }, 'error': function(response) {
+      console.log(response.statusText);
     }
-    myFunctionBlock(input1.value);
+  });
+};
+
+$("#query").click(function() {
+  // our inputText is going to be equal to the value of the input field
+  var inputText = $("#searchBar").val();
+  
+  // then, as long as our input field isn't blank, let's call that function above and pass in the inputText as an argument
+  if (inputText !== "") {
+    getAPIData(inputText);
+  }
+});
