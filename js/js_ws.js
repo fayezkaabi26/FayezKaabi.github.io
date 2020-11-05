@@ -17,12 +17,25 @@ $(document).ready(function() {
 	});
 });
 
-const searchBar = document.getElementById('searchBar');
+ function myFunctionBlock() {
 
-searchBar.addEventListener("keyup", e => {});
+        var request;
+        var input1 = document.getElementById('searchBar');
+        var api = 'https://api.blockcypher.com/v1/btc/main/blocks/';
+        var sum = api + input1.value;
 
-searchBar.addEventListener("keyup", e => { 
-  const searchString = e.target.value; 
-});
+        request = new XMLHttpRequest();
 
-console.log(searchString);
+        request.open('GET', sum, true);
+        request.onload = function () {
+
+            var data = JSON.parse(this.response);
+            if (request.status >= 200 && request.status < 400) {
+                console.log(data);
+            } else {
+                console.log(input1.value);
+            }
+        }
+        request.send();
+    }
+    myFunctionBlock(input1.value);
